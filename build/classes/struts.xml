@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<!-- 配置根元素 -->
+<struts>
+	<package name="userlogin" extends = "struts-default">
+			<default-action-ref name="index"></default-action-ref>
+				<action name="index">
+			<result >/error.jsp</result>
+		</action>
+		<action name="loginAction" method = "login" class = "com.strustrenting.action.UserAction">
+			<result name = "success">/loadedindex.jsp</result>
+			<result name = "fail">/fail.jsp</result>
+			<result name = "manager">/manage.jsp</result>
+		</action>
+		<action name="registerAction" method="register" class = "com.strustrenting.action.UserAction">
+			<result name = "success" >/registersuccess.jsp</result>
+			<result name = "fail">/fail.jsp</result>
+		</action>
+		<action name="changeInformationAction" method="changeInformation" class = "com.strustrenting.action.UserAction">
+			<result name = "success">/personalData.jsp</result>
+			
+		</action>
+		<action name="deleteUserAction" method="deleteUser" class = "com.strustrenting.action.UserAction">
+			<result name = "success" >/manage-User.jsp</result>
+		</action>
+		<action name="myHouse" method = "myHouseAction" class = "com.strustrenting.action.MyHouseAction">
+			<result name = "success">/HouseDetil.jsp</result>
+			<result name = "deleted">/MyHouse.jsp</result>
+			<result name = "change">/ChangePostMessage.jsp</result>
+		</action>
+				<action name="seekHouseAction" class = "com.strustrenting.action.SeekHouseAction" method = "seekHouseInformation">
+			<result name = "success">/seekedHouse.jsp</result>
+		</action>
+		<action name="seekHouseDetailsAction" class = "com.strustrenting.action.SeekHouseDetailAction" method = "seekHouseDetails">
+			<result name = "success">/seekedHouseDetil.jsp</result>
+		
+		</action>
+		<action name="placeOrderAction" class = "com.strustrenting.action.OrdersAction" method = "placeOrder">
+			<result name = "success">/Orders.jsp</result>
+		
+		</action>
+		<action name="manageUersOrdersAction" class = "com.strustrenting.action.ManageUsersOrders" method = "manageUserdOrders">
+			<result name = "success">/Orders.jsp</result>
+		</action>
+		<action name="manageOrdersAction" class = "com.strustrenting.action.ManageOrdersAction" method = "manageOrders">
+			<result name = "success">/HireOrders.jsp</result>
+		
+		</action>
+		<action name="changePasswordAction" class = "com.strustrenting.action.ChangePasswordAction" method = "changePassword">
+			<result name = "success">/index.jsp</result>
+		</action>
+		<action name="changHouseInformationAction" class = "com.strustrenting.action.ChangeHouseInformation" method = "changHouseInformation">
+			<result name = "success">/MyHouse.jsp</result>
+		</action>
+		<action name="messageAction" class = "com.strustrenting.action.MessageAction" method = "getMessage">
+			<result name = "success">/seekedHouseDetil.jsp</result>
+		</action>
+		<action name="deleteMessageAction" class = "com.strustrenting.action.DeleteMessage" method = "deleteMessage">
+			<result name = "success">/seekedHouseDetil.jsp</result>
+		</action>
+	</package>
+	<package name="load" extends = "struts-default">
+			<action name="uploadAction" class = "com.strustrenting.action.UploadAction">
+			<result name = "success">/personalData.jsp</result>
+			<result name = "error">/error.jsp</result>
+			<interceptor-ref name="fileUpload">
+				<param name="maximumSize">2M</param>
+			</interceptor-ref>
+			<interceptor-ref name="defaultStack"></interceptor-ref>
+		</action>
+	</package>
+	<package name="house" extends = "struts-default">
+		<action name="createHouseAction" class = "com.strustrenting.action.HouseAction" method = "createHouse">
+			<result name = "success">/PostSuccess.jsp</result>
+		</action>
+		<action name="manageHouseAction" class = "com.strustrenting.action.ManageHouseAction" method = "manageHouse">
+			<result name = "success">/manage-House.jsp</result>
+		</action>
+
+	</package>
+</struts>

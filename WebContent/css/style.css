@@ -1,0 +1,34 @@
+*{ margin:0px; padding:0px;}
+
+header{width: 1200px; margin:0px; padding:0px; height: 50px; position: relative; overflow: hidden }
+.logo{width:225px;height:40px;position:absolute;left:0px;}
+.serch{width:1000px;heigh:50px;position:absolute;left:990px;bottom:30px;}
+.banner { width:100%;height:550px;margin:0px;border:0px;padding:0px;position:absolute;top:70px; left:0px;}
+.turn{ width:100%;height:500px;}
+#title{width:100%;height:70px;margin:0px;border:0px;padding-top:1px; padding-bottom:0px;background:#66CC99; }
+#HotRenting{color:#FFFFFF;text-align:center;font-family:"Î¢ÈíÑÅºÚ"; }
+.content{ width:100%; margin:0px; height: 1450px; position: absolute;top:710px;left:40px;overflow: hidden }
+.IndexHourse{width:300px;height:300px; margin:10px;float:left;}
+.hourse1{width:100%;height:100%}
+.IndexHourse2{width:620px;height:350px; margin:10px;position:absolute;top:317px;}
+.IndexHourse2_1{width:620px;height:350px; margin:10px;position:absolute;left:640px;top:317px;}
+#title2{
+margin:0px;border:0px;padding:0px;width:100%; background:#FFFFFF;position:absolute;top:1400px;
+}
+.p1{color:#666666;text-align:center;font-family:"Î¢ÈíÑÅºÚ"}
+.p2{color:#999999;text-align:center;font-family:"ËÎÌå";font-size:16px}
+.frends{width:100%;height:100%}
+.frendphoto1{width:50%;height:350px; margin:0px;position:absolute;left:0px;top:130px;}
+.frendphoto2{width:50%;height:350px; margin:0px;position:absolute;right:0px;top:130px;}
+.ads{width:100%;height:110px;margin:0px;position:absolute;top:520px;}
+.phone{width:30px;height:30px;margin:0px;position:absolute;top:2035px;left:50px;float:left;}
+.phonenumber{color:#666666;text-align:center;font-family:"Î¢ÈíÑÅºÚ";font-size:17px;position:absolute;top:2038px;left:83px; }
+
+
+
+
+
+
+
+
+
